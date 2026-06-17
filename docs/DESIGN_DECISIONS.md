@@ -41,7 +41,7 @@ DevLoop 想支持 12 个 AI 编码工具 (Claude/Codex/Gemini/...)。
 
 ### Context (背景)
 
-主流 Node.js 项目用 Prisma 做 ORM。DevLog 模块也可以用。
+主流 Node.js 项目用 Prisma 做 ORM。DevLoop 模块也可以用。
 
 ### Decision (决策)
 
@@ -66,12 +66,12 @@ DevLoop 想支持 12 个 AI 编码工具 (Claude/Codex/Gemini/...)。
 
 ### Context (背景)
 
-DevLog 是 fastify plugin 模式,跟主 backend (小辉 CRM/ERP) 共享 fastify 实例。但智能体调度 (openclaw 大脑) 跟数据持久化职责不同。
+DevLoop 是 fastify plugin 模式,跟主 backend (小辉 CRM/ERP) 共享 fastify 实例。但智能体调度 (openclaw 大脑) 跟数据持久化职责不同。
 
 ### Decision (决策)
 
 **两层分工**:
-- **数据底座** = DevLog (Fastify + PostgreSQL, 持久化 + 检索, 不做决策)
+- **数据底座** = DevLoop (Fastify + PostgreSQL, 持久化 + 检索, 不做决策)
 - **智能体层** = OpenClaw 大脑 + ACP Agent (调度 + 决策 + 执行)
 
 ### Consequences (后果)
@@ -93,7 +93,7 @@ DevLog 是 fastify plugin 模式,跟主 backend (小辉 CRM/ERP) 共享 fastify 
 
 ### Context (背景)
 
-传统 agent 框架 (AutoGen/CrewAI) 强调"多 agent",但角色设计随意。DevLog 要解决"项目协作"。
+传统 agent 框架 (AutoGen/CrewAI) 强调"多 agent",但角色设计随意。DevLoop 要解决"项目协作"。
 
 ### Decision (决策)
 
@@ -176,7 +176,7 @@ DevLog 是 fastify plugin 模式,跟主 backend (小辉 CRM/ERP) 共享 fastify 
 
 ### Context (背景)
 
-DevLog 模块嵌入小辉数字员工 2.0 系统的 fastify plugin 里,跟 CRM/ERP 业务代码混在一起。
+DevLoop 模块嵌入小辉数字员工 2.0 系统的 fastify plugin 里,跟 CRM/ERP 业务代码混在一起。
 
 ### Decision (决策)
 

@@ -1,4 +1,4 @@
-# DevLog 智能调度中心 — 总指挥工作手册 V2.3
+# DevLoop 智能调度中心 — 总指挥工作手册 V2.3
 
 > 迭代记录:
 > V2.0 海刚 14:34 定调 | V2.1 18:50 对照修正 | V2.2 00:06 岗位+总指挥细化 | V2.3 00:14 补运行态缺口
@@ -9,9 +9,9 @@
 
 1. **我是总指挥** — 管人/管活/管质量，不替员工干活
 2. **岗位固定，员工不固定** — 6 岗位，agent 注册时入职，可兼岗
-3. **DevLog 是公司章程** — project_modules 总纲 + guidelines 铁律 + lessons 经验
+3. **DevLoop 是公司章程** — project_modules 总纲 + guidelines 铁律 + lessons 经验
 4. **员工自己领活 (pull)** — 任务创建后 agent 从任务池自己领取
-5. **能一步到位就一步到位** — agent 做完直接更新 DevLog
+5. **能一步到位就一步到位** — agent 做完直接更新 DevLoop
 6. **总指挥离线时 agent 自行运转** — 夜间/离线兜底，agent 按岗位职责自动工作
 
 ---
@@ -21,9 +21,9 @@
 | 岗位 | ID | 职责 | 能力要求 | 目标模块路径映射 |
 |------|-----|------|---------|----------------|
 | **审查岗** | inspector | 巡查→发现问题→发任务 or 报告 | scan, api_probe, audit, report | 全局 |
-| **修复岗** | fixer | 领bug→精准修复→commit→更新 DevLog | code, bug_fix, route_fix, commit | 查 project_modules.code_path |
+| **修复岗** | fixer | 领bug→精准修复→commit→更新 DevLoop | code, bug_fix, route_fix, commit | 查 project_modules.code_path |
 | **方案岗** | architect | 解析需求→设计→模块化→准则→搜索→拆任务 | design, plan, research, module_design | 新建模块 |
-| **开发岗** | developer | 领开发任务→按方案+准则写代码→更新 DevLog | code, develop, feature, implement | 查 project_modules |
+| **开发岗** | developer | 领开发任务→按方案+准则写代码→更新 DevLoop | code, develop, feature, implement | 查 project_modules |
 | **复审岗** | reviewer | 复审 fixer/developer 的 commit | review, security, architecture | — |
 | **审计岗** | auditor | 深度分析、安全扫描 | audit, security_scan, deep_analysis | — |
 
@@ -293,7 +293,7 @@ Step 12 — 我收到通知 → 验证+复审
 | 情况 | 兜底 |
 |------|------|
 | inspector cron 触发但总指挥不在 | inspector 直接一步到位：自己扫、自己发任务、自己发公告 |
-| fixer 拉任务 | fixer 不依赖总指挥，自己从任务池拉、自己修、自己更新 DevLog |
+| fixer 拉任务 | fixer 不依赖总指挥，自己从任务池拉、自己修、自己更新 DevLoop |
 | developer 拉任务 | 同上 |
 | 任务完成无人验证 | 任务标记 completed 后，下次总指挥上线时补验证 |
 
@@ -309,7 +309,7 @@ Step 12 — 我收到通知 → 验证+复审
 入职岗位: inspector | 值班员工: <agent_id>
 
 ## 职责
-巡查系统健康，发现问题直接创建 DevLog 任务。
+巡查系统健康，发现问题直接创建 DevLoop 任务。
 
 ## 巡查范围
 - API: 对所有模块路由 GET /limit=1
@@ -345,7 +345,7 @@ Step 12 — 我收到通知 → 验证+复审
 入职岗位: fixer | 值班员工: <agent_id>
 
 ## 职责
-从 DevLog 拉 pending 修复任务，精准修复后自己更新 DevLog，循环。
+从 DevLoop 拉 pending 修复任务，精准修复后自己更新 DevLoop，循环。
 
 ## 工作循环
 1. GET /api/v1/dev/tasks?status=pending&target_position=fixer&limit=3
@@ -375,7 +375,7 @@ Step 12 — 我收到通知 → 验证+复审
 入职岗位: architect | 值班员工: <agent_id>
 
 ## 职责
-根据需求设计完整方案(设计+模块+准则+弹药库+任务拆解)，一步到位写入 DevLog。
+根据需求设计完整方案(设计+模块+准则+弹药库+任务拆解)，一步到位写入 DevLoop。
 
 ## 本次需求
 <需求原文>
@@ -417,7 +417,7 @@ Step 12 — 我收到通知 → 验证+复审
 入职岗位: developer | 值班员工: <agent_id>
 
 ## 职责
-从 DevLog 拉 pending 开发任务，按方案+准则写代码，自己更新 DevLog，循环。
+从 DevLoop 拉 pending 开发任务，按方案+准则写代码，自己更新 DevLoop，循环。
 
 ## 工作循环
 1. GET /api/v1/dev/tasks?status=pending&target_position=developer&limit=3
@@ -466,9 +466,9 @@ Step 12 — 我收到通知 → 验证+复审
 - 🧠 总指挥管人/管活/管质量，不替员工干活
 - 🏢 岗位固定，员工入职/离职/兼岗
 - ✋ agent pull 领取任务，总指挥不 push
-- ⚡ agent 一步到位（自己发任务/更新 DevLog）
+- ⚡ agent 一步到位（自己发任务/更新 DevLoop）
 - 🌙 总指挥离线时 agent 按岗位职责自行运转
-- 📖 DevLog 是宪章：表盘总纲 + 准则铁律 + 经验教训
+- 📖 DevLoop 是宪章：表盘总纲 + 准则铁律 + 经验教训
 - 📊 表盘随动：每个任务完成自动计算 completion_pct
 - 🔍 总指挥验证：curl + git diff，不通过退回
 - 📝 任务 description 必须含：文件路径 + 原因 + 修复方向

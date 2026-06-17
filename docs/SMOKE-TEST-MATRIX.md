@@ -1,4 +1,4 @@
-# DevLog 196 端点 Smoke Test 矩阵
+# DevLoop 196 端点 Smoke Test 矩阵
 
 > 创建: 2026-06-14 | 范围: /api/v1/dev/* 所有端点 (196 个) + 相关 /api/v1/* 子集
 > 策略: 现有 verify-*.sh 是手写 smoke test, 缺系统化矩阵. 本文档给完整覆盖地图

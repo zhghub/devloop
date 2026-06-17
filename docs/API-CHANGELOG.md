@@ -1,4 +1,4 @@
-# DevLog API Changelog (V2.3 → V3.1)
+# DevLoop API Changelog (V2.3 → V3.1)
 
 > 创建: 2026-06-14 | 数据源: DEVLOG-V2.3-MASTER.md / DEVLOG-MAP.md / DEVLOG-WORKFLOW-V3.md / 源码实读
 > 维护方式: 每次发版 (V3.2/V4.0) 时增量追加, 旧版本冻结不删
@@ -94,7 +94,7 @@
 
 ### 其他 4 端点
 - `/api/v1/dev/devlog-context/...` (3 端点) — 铁律浸润上下文
-- `/api/v1/dev/dev-health` (1 端点) — DevLog 子系统健康
+- `/api/v1/dev/dev-health` (1 端点) — DevLoop 子系统健康
 - `/api/v1/dev/dev-ui-proxy/...` (5 端点) — 前端代理
 - `/api/v1/dev/archive` (2 端点) — 归档查询
 - `/api/v1/dev/arsenal-data` (1 端点) — 武器库

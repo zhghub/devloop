@@ -1,6 +1,6 @@
-# DevLog V2.3 系统方案 (MASTER 终稿)
+# DevLoop V2.3 系统方案 (MASTER 终稿)
 
-> **文档定位**: 本文档是 DevLog V2.3 系统的**唯一权威方案**,取代旧的 DEVLOG-MASTER-PLAN / DEVLOG-OPTIMIZATION-PLAN / DEVLOG-FEATURES / DEVLOG-AUTONOMOUS-CHAIN / DEVLOG-PRODUCT-MANUAL / 小辉数字员工2.0-DevLog开发中枢系统说明 / V23-DEPLOYMENT-REPORT / V23-DELETION-LOG 共 8 份旧文档,以及 docs/legacy-plans/ 17 个 5/22 之前的旧方案
+> **文档定位**: 本文档是 DevLoop V2.3 系统的**唯一权威方案**,取代旧的 DEVLOG-MASTER-PLAN / DEVLOG-OPTIMIZATION-PLAN / DEVLOG-FEATURES / DEVLOG-AUTONOMOUS-CHAIN / DEVLOG-PRODUCT-MANUAL / 小辉数字员工2.0-DevLoop开发中枢系统说明 / V23-DEPLOYMENT-REPORT / V23-DELETION-LOG 共 8 份旧文档,以及 docs/legacy-plans/ 17 个 5/22 之前的旧方案
 > **版本**: V2.3 (终稿, 2026-06-10)
 > **最后更新**: 2026-06-10 16:58 GMT+8
 > **适用范围**: 任何 OpenClaw 实例迁过来都按本文档对齐
@@ -11,13 +11,13 @@
 
 ### 1.1 核心定义
 
-**DevLog = 小辉数字员工2.0的 AI 开发任务调度中枢**。负责: 任务管理、多 Agent 调度、代码审计、准则注册、仪表盘、通知。
+**DevLoop = 小辉数字员工2.0的 AI 开发任务调度中枢**。负责: 任务管理、多 Agent 调度、代码审计、准则注册、仪表盘、通知。
 
 ### 1.2 范式 (永久铁律)
 
 ```
 ┌────────────────────────────────────────────────────┐
-│ DevLog = 数据底座 (Fastify+Prisma+PostgreSQL)       │
+│ DevLoop = 数据底座 (Fastify+Prisma+PostgreSQL)       │
 │   - 持久化 + 检索, 不做决策                         │
 │   - 12 张表 + 80+ API + 4 层硬约束                  │
 │   - 不靠 MEMORY.md 记忆, 迁到任何 OpenClaw 都能跑    │
@@ -48,7 +48,7 @@
 - ❌ **codex + deepseek CLI**: 装在宿主机但容器内 candidates 找不到 (待修, Stage 6)
 - ⚠️ **21 个 pending 任务** (P1: 16, P2: 5) 卡住
 - ⚠️ **V5 scheduler** enabled+active+Restart=always (PID 3813 14:26 复活, 抢任务)
-- ⚠️ **cron 677d03ce** "DevLog自动修复循环" 99 次 skipped, 根本没调度
+- ⚠️ **cron 677d03ce** "DevLoop自动修复循环" 99 次 skipped, 根本没调度
 - ✅ **4 层硬约束**: 全绿 (api/db/publish/consumer)
 - ⚠️ **dev_spawn_queue** 主路径走 DB (V23), 文件路径 fallback 仍叫 .v5-spawn-queue.jsonl (历史包袱, 不动)
 
@@ -324,7 +324,7 @@ UPDATE dev_task_logs SET status='pending', agent_name=NULL
 WHERE status='in_progress' AND updated_at < NOW() - INTERVAL '30 minutes';
 
 -- 4 层硬约束查询
-SELECT verifyDevLogContract() AS status;
+SELECT verifyDevLoopContract() AS status;
 
 -- dev_spawn_queue 队列 (V2.3 主路径)
 SELECT * FROM dev_spawn_queue WHERE spawned_at IS NULL AND completed_at IS NULL
@@ -444,11 +444,11 @@ host:
   ├── systemd:
   │   └── (无 — V3.1 不需要 systemd service 起 devlog worker, 唯一 service 是 `devlog-pg-listen.service` 宿主机跑)
   └── OpenClaw cron:
-      ├── 677d03ce DevLog自动修复循环  # ⏳ 改写 (Stage 5)
+      ├── 677d03ce DevLoop自动修复循环  # ⏳ 改写 (Stage 5)
       ├── 57330452 session-context-manager (30m)
       ├── 63fa1f81 Module Completeness Audit (0 */6h)
-      ├── b879cd4a DevLog 4层硬约束自检 (0 */6h)  # ✅ 真活
-      ├── 6f79b68c DevLog全系统自检 (3h)
+      ├── b879cd4a DevLoop 4层硬约束自检 (0 */6h)  # ✅ 真活
+      ├── 6f79b68c DevLoop全系统自检 (3h)
       ├── 70470ccb fullstack-health-audit (4h)
       ├── 6cccfcce code-quality-scanner (8h)
       ├── 74e8f777 每日开发日报 (0 9 * * 1-5)
@@ -552,7 +552,7 @@ const FP_CREATION_PATTERNS = [
 │   ├── DEVLOG-FEATURES.md
 │   ├── DEVLOG-AUTONOMOUS-CHAIN.md
 │   ├── DEVLOG-PRODUCT-MANUAL.md
-│   ├── 小辉数字员工2.0-DevLog开发中枢系统说明.md
+│   ├── 小辉数字员工2.0-DevLoop开发中枢系统说明.md
 │   ├── V23-DEPLOYMENT-REPORT.md
 │   ├── V23-DELETION-LOG.md
 │   └── legacy-plans/             # 17 个 5/22 之前的旧方案
@@ -617,7 +617,7 @@ const FP_CREATION_PATTERNS = [
 | DEVLOG-FEATURES.md | 114 | V3.0 | .trash.v23/docs/ |
 | DEVLOG-AUTONOMOUS-CHAIN.md | 507 | V4.0/V4.1 | .trash.v23/docs/ |
 | DEVLOG-PRODUCT-MANUAL.md | 515 | V4.0 | .trash.v23/docs/ |
-| 小辉数字员工2.0-DevLog开发中枢系统说明.md | 857 | V4.1 | .trash.v23/docs/ |
+| 小辉数字员工2.0-DevLoop开发中枢系统说明.md | 857 | V4.1 | .trash.v23/docs/ |
 | V23-DEPLOYMENT-REPORT.md | 135 | V2.3 部署 | .trash.v23/docs/ |
 | V23-DELETION-LOG.md | 113 | V2.3 删除 | .trash.v23/docs/ |
 | legacy-plans/*.md | 17 文件 | V1.0-V4.0 | .trash.v23/docs/legacy-plans/ |
