@@ -24,7 +24,7 @@
 ## ⚡ 30 秒上手
 
 ```bash
-git clone https://github.com/devloop/devloop
+git clone https://github.com/zhghub/devloop
 cd devloop
 docker compose up -d
 
@@ -86,8 +86,36 @@ curl http://localhost:3001/api/v1/dev/health
 - [V2.3 系统方案](docs/DEVLOG-V2.3-MASTER.md)
 - [总指挥手册](docs/SMART-DISPATCH-V2.md)
 - [ACP Harness 矩阵](docs/ACP-AGENT-CAPABILITY-MATRIX.md)
-- [API 变更日志](backend/src/modules/devlog/docs/API-CHANGELOG.md)
-- [数据库 ER 图](backend/src/modules/devlog/docs/devlog-ER.md)
+- [路线图](docs/ROADMAP.md) · [架构概览](docs/ARCHITECTURE.md) · [设计决策](docs/DESIGN_DECISIONS.md)
+- [API 变更日志](docs/API-CHANGELOG.md) · [数据库 ER 图](docs/devlog-ER.md) · [测试矩阵](docs/SMOKE-TEST-MATRIX.md)
+
+---
+
+## 🌳 DevLoop 来自哪里?
+
+DevLoop 是从 **小辉数字员工 2.0** (AI 企业 ERP/CRM 系统) 里**剥离出来的开源模块**。
+
+```
+┌─────────────────────────────────────────────┐
+│         小辉数字员工 2.0 (母系统)            │
+│   22 后端模块 · 152 张表 · 飞书/企微/微信集成  │
+│                                             │
+│   ┌──────────────────────────────────────┐ │
+│   │ DevLog (开发任务调度中枢 · 8 角色)    │ │
+│   │     👉  剥离 → 开源 = DevLoop        │ │
+│   └──────────────────────────────────────┘ │
+└─────────────────────────────────────────────┘
+```
+
+**DevLoop 拿走的**: 数据底座 + 智能体调度 (0 业务耦合)
+**DevLoop 留下的**: 跟小辉 CRM/ERP/商城 完全无关
+
+📚 小辉数字员工系统方案文档: [`docs/xiaohui/`](docs/xiaohui/)
+- [小辉数字员工系统总体方案](docs/xiaohui/小辉数字员工系统总体方案.md)
+- [多 Agent 协同方案 V5](docs/xiaohui/MULTI-AGENT-DESIGN-V5.md)
+- [商城智能分销商城完整方案](docs/xiaohui/商城智能分销商城完整方案.md)
+
+💬 **对小辉数字员工系统感兴趣的**?欢迎在 [Discussions](https://github.com/zhghub/devloop/discussions) 交流!
 
 ---
 
@@ -95,8 +123,8 @@ curl http://localhost:3001/api/v1/dev/health
 
 DevLoop 是 MIT 协议开源项目。
 
-- 🐛 Bug 反馈: [Issues](https://github.com/devloop/devloop/issues)
-- 💡 功能建议: [Discussions](https://github.com/devloop/devloop/discussions)
+- 🐛 Bug 反馈: [Issues](https://github.com/zhghub/devloop/issues)
+- 💡 功能建议: [Discussions](https://github.com/zhghub/devloop/discussions)
 - 🔧 提交代码: 见 [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ---
@@ -107,4 +135,4 @@ DevLoop 是 MIT 协议开源项目。
 
 ---
 
-🌐 [devloop.cn](https://devloop.cn) · [GitHub](https://github.com/devloop/devloop) · Discord
+🌐 [devloop.cn](https://devloop.cn) · [GitHub](https://github.com/zhghub/devloop) · Discord
