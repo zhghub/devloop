@@ -106,8 +106,8 @@ DevLoop 是从 **小辉数字员工 2.0** (AI 企业 ERP/CRM 系统) 里**剥离
 │   22 后端模块 · 152 张表 · 飞书/企微/微信集成  │
 │                                             │
 │   ┌──────────────────────────────────────┐ │
-│   │ DevLog (开发任务调度中枢 · 8 角色)    │ │
-│   │     👉  剥离 → 开源 = DevLoop        │ │
+│   │ DevLoop (开发任务调度中枢 · 8 角色)    │ │
+│   │     👉  原本叫 DevLog,2026-06 改名   │ │
 │   └──────────────────────────────────────┘ │
 └─────────────────────────────────────────────┘
 ```
@@ -115,10 +115,7 @@ DevLoop 是从 **小辉数字员工 2.0** (AI 企业 ERP/CRM 系统) 里**剥离
 **DevLoop 拿走的**: 数据底座 + 智能体调度 (0 业务耦合)
 **DevLoop 留下的**: 跟小辉 CRM/ERP/商城 完全无关
 
-📚 小辉数字员工系统方案文档: [`docs/xiaohui/`](docs/xiaohui/)
-- [小辉数字员工系统总体方案](docs/xiaohui/小辉数字员工系统总体方案.md)
-- [多 Agent 协同方案 V5](docs/xiaohui/MULTI-AGENT-DESIGN-V5.md)
-- [商城智能分销商城完整方案](docs/xiaohui/商城智能分销商城完整方案.md)
+📖 **了解母系统** → [docs/xiaohui/README.md](docs/xiaohui/README.md) (简介,5 分钟读完)
 
 💬 **对小辉数字员工系统感兴趣的**?欢迎在 [Discussions](https://github.com/zhghub/devloop/discussions) 交流!
 
