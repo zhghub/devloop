@@ -1,7 +1,7 @@
 # 🏗️ DevLoop 架构 (一图流)
 
 > 一图 + 一表 + 一句话,看完懂 DevLoop 怎么工作。
-> 详细架构看 [DEVLOG-V2.3-MASTER.md](DEVLOG-V2.3-MASTER.md)
+> 详细架构看 [DEVLoop-V2.3-MASTER.md](DEVLoop-V2.3-MASTER.md)
 
 ## 🎯 一句话
 
@@ -92,7 +92,7 @@
 | 项目 | project_modules / project_versions / project_changelog |
 | 审计 | dev_audit_runs / dev_alert_history |
 
-> 完整 ER 图: [devlog-ER.md](devlog-ER.md)
+> 完整 ER 图: [devlog-ER.md](devloop-ER.md)
 
 ## 🔌 12 ACP Harness 兼容
 
@@ -108,9 +108,9 @@
 
 | 能力 | 实现 | 文档 |
 |---|---|---|
-| **📥 4 入口方案接入** | intake-agent + plan-parsing-agent | [DEVLOG-WORKFLOW-V3 §4.1](DEVLOG-WORKFLOW-V3.md) |
-| **🧠 代际进化审查** | dev_audit_runs.generation + review.js prompt | [DEVLOG-WORKFLOW-V3 §4.3](DEVLOG-WORKFLOW-V3.md) |
-| **🔧 自修复闭环** | findings → tasks → developer → 验证 → 下一代审查 | [DEVLOG-WORKFLOW-V3 §4.3-4.4](DEVLOG-WORKFLOW-V3.md) |
+| **📥 4 入口方案接入** | intake-agent + plan-parsing-agent | [DEVLOG-WORKFLOW-V3 §4.1](DEVLoop-WORKFLOW-V3.md) |
+| **🧠 代际进化审查** | dev_audit_runs.generation + review.js prompt | [DEVLOG-WORKFLOW-V3 §4.3](DEVLoop-WORKFLOW-V3.md) |
+| **🔧 自修复闭环** | findings → tasks → developer → 验证 → 下一代审查 | [DEVLOG-WORKFLOW-V3 §4.3-4.4](DEVLoop-WORKFLOW-V3.md) |
 
 ## 📦 技术栈
 
