@@ -2,6 +2,10 @@
 
 > **你的 AI 写代码写完了 — 然后呢?**
 
+![Status](https://img.shields.io/badge/status-v0.1.0-yellow) ![License](https://img.shields.io/badge/license-MIT-blue) ![Stage](https://img.shields.io/badge/stage-仓库预热-orange)
+
+> 💡 **DevLoop 原名 DevLog**,2026-06-17 正式改名独立开源。详细见 [docs/NAMING.md](docs/NAMING.md)。
+
 ---
 
 你的 AI 写完代码 → 然后呢?
@@ -82,13 +86,13 @@ curl http://localhost:3001/api/v1/dev/health
 
 ## 📚 文档
 
-- [V3.1 工作流 (权威)](docs/DEVLOG-WORKFLOW-V3.md)
-- [V2.3 系统方案](docs/DEVLOG-V2.3-MASTER.md)
+- [V3.1 工作流 (权威)](docs/DEVLOOP-WORKFLOW-V3.md)
+- [V2.3 系统方案](docs/DEVLOOP-V2.3-MASTER.md)
 - [总指挥手册](docs/SMART-DISPATCH-V2.md)
 - [ACP Harness 矩阵](docs/ACP-AGENT-CAPABILITY-MATRIX.md)
 - [路线图](docs/ROADMAP.md) · [架构概览](docs/ARCHITECTURE.md) · [设计决策](docs/DESIGN_DECISIONS.md)
-- [API 变更日志](docs/API-CHANGELOG.md) · [数据库 ER 图](docs/devlog-ER.md) · [测试矩阵](docs/SMOKE-TEST-MATRIX.md)
-- ❓ [常见问题 FAQ](docs/FAQ.md)
+- [API 变更日志](docs/API-CHANGELOG.md) · [数据库 ER 图](docs/devloop-ER.md) · [测试矩阵](docs/SMOKE-TEST-MATRIX.md)
+- ❓ [FAQ](docs/FAQ.md) · 🏷️ [命名说明](docs/NAMING.md)
 
 ---
 
