@@ -88,6 +88,7 @@ curl http://localhost:3001/api/v1/dev/health
 - [ACP Harness 矩阵](docs/ACP-AGENT-CAPABILITY-MATRIX.md)
 - [路线图](docs/ROADMAP.md) · [架构概览](docs/ARCHITECTURE.md) · [设计决策](docs/DESIGN_DECISIONS.md)
 - [API 变更日志](docs/API-CHANGELOG.md) · [数据库 ER 图](docs/devlog-ER.md) · [测试矩阵](docs/SMOKE-TEST-MATRIX.md)
+- ❓ [常见问题 FAQ](docs/FAQ.md)
 
 ---
 
@@ -126,6 +127,18 @@ DevLoop 是 MIT 协议开源项目。
 - 🐛 Bug 反馈: [Issues](https://github.com/zhghub/devloop/issues)
 - 💡 功能建议: [Discussions](https://github.com/zhghub/devloop/discussions)
 - 🔧 提交代码: 见 [CONTRIBUTING.md](CONTRIBUTING.md)
+
+## 📞 交流 / 客服
+
+| 渠道 | 用途 | 状态 |
+|---|---|---|
+| 💬 GitHub Discussions | 技术问题 / 想法 / 分享 | ✅ 现在可用 |
+| 🐛 GitHub Issues | Bug / 功能建议 | ✅ 现在可用 |
+| 🌐 官网 devloop.cn | 项目主页 | ✅ 上线中 |
+| 💬 小辉数字员工 Webchat | 商业咨询 | 🔜 待上线 (v1.0 GA 后) |
+| 🎵 抖音号 | 项目宣传 | 🔜 待开通 |
+
+> 💡 **对小辉数字员工 2.0 (母系统)** 感兴趣也欢迎交流!看 [docs/xiaohui/](docs/xiaohui/)
 
 ---
 
