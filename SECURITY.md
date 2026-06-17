@@ -11,7 +11,7 @@
 
 我们非常重视安全问题。请**不要**在公开 Issue 中报告安全漏洞。
 
-📧 邮箱:security@devloop.cn
+📧 邮箱:kmjdk@qq.com
 
 ### 报告内容
 
