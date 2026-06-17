@@ -26,10 +26,8 @@
 - ✅ 完整文档 (V3.1 Workflow / V2.3 Master / 总指挥手册 / ACP 矩阵)
 
 #### 已知问题
-- ⚠️ 4 个 agent 中 2 个跑不起来 (opencode 1.17.7 stdout flush + claude-main 派不出去)
-- ⚠️ 弹药库后端部分未实现
-- ⚠️ 部分 V3.1 P1/P2 差距未完成
+-- ⚠️ 部分 V3.1 P1/P2 差距未完成
 
 ---
 
-🔄 [devloop.cn](https://devloop.cn) · [GitHub](https://github.com/devloop/devloop)
+🔄 [www.devloop.cn](https://www.devloop.cn) · [GitHub](https://github.com/devloop/devloop)
